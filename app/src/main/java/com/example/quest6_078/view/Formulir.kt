@@ -50,3 +50,12 @@ fun FormIsian(
         txtGender,
         txtAlamat
     )
+
+    Scaffold (modifier= Modifier,
+        {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.detail),
+                    color = Color.White)},
+                colors = TopAppBarDefaults.topAppBarColors
+                    (colorResource(id = R.color.teal_700))
+            ) }
