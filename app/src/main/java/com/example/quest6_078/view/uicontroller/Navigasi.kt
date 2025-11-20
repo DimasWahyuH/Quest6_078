@@ -46,3 +46,20 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.Detail.name){
+                TampilData(
+                    statusUISiswa = uiState.value,
+                    { cancelAndBackToFormulir(navController) }
+                )
+            }
+        }
+
+    }
+
+}
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+) {
+    navController.popBackStack(Navigasi.Formulir.name,
+        inclusive = false)
+}
